@@ -77,12 +77,12 @@ public int sparseVectorProduct(int[] a,int[] b){
 	int i = 0, j = l2.size() - 1, res = 0;
 	for (Node n1 : l1) {
 		j = l2.size() - 1;
-    	while (i <= j) {
-        	int mid = i + (j - i) / 2;
-       		if (l2.get(mid).idx == n1.idx) 	res += n1.val * l2.get(mid).val;
-        	else if (l2.get(mid).idx < n1.idx) 	i = mid + 1;
-        	else 	j = mid - 1;
-    	}
+		while (i <= j) {
+			int mid = i + (j - i) / 2;
+			if (l2.get(mid).idx == n1.idx) 	res += n1.val * l2.get(mid).val;
+			else if (l2.get(mid).idx < n1.idx) 	i = mid + 1;
+			else 	j = mid - 1;
+		}
     }
 	return res;
 }
